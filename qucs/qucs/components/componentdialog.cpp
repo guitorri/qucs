@@ -1214,6 +1214,8 @@ void ComponentDialog::slotButtRem()
   if(item == 0)
     return;
 
+  /// \todo test remove of parameters
+
   // peek next, delete current, set next current
   if ( row < prop->rowCount()) {
     prop->setCurrentItem(prop->item(row+1,0));
