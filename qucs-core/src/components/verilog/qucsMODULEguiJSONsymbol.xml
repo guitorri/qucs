@@ -164,6 +164,9 @@
 
 <admst:text format="  &quot;BitmapFile&quot; : &quot;$module&quot;,\n"/>
 
+<!-- add placeholder for spice include files -->
+<admst:text format="  &quot;IncludeFile&quot; : &quot;&quot;,\n"/>
+
 <!-- put in here symbol drawing code and terminal definitions -->
 <admst:text format="\n}"/>
 
