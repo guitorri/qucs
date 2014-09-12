@@ -1338,7 +1338,10 @@ void QucsApp::slotClearRecentFiles()
 }
 
 /*!
- * \brief QucsApp::slotLoadModule launches the dialog to select dynamic modueles
+ * \brief QucsApp::slotLoadModule launches the dialog to select dynamic modules
+ *
+ * It passes the list of json files found on QucsWorkDir to the loader dialog.
+ * The dialog returns a list of selected items for netlist annotation.
  */
 void QucsApp::slotLoadModule()
 {
@@ -1347,13 +1350,14 @@ void QucsApp::slotLoadModule()
     LoadDialog *ld = new LoadDialog(this);
     ld->setApp(this);
 
-    // fech list of _symbol.json
+    // fech list of _props.json files
     // \todo fetch timestamp of VA, JSON, if VA newer, need to reload.
 
     QDir projDir = QucsSettings.QucsWorkDir.absolutePath();
 
+    /*! after slotBuildModule _props.json and _sym.json should be in the QucsWorkDir */
     QStringList files;
-    QString fileSuffix = "*_symbol.json";
+    QString fileSuffix = "*_props.json";
 
     files = projDir.entryList(QStringList(fileSuffix),
                                  QDir::Files | QDir::NoSymLinks);
@@ -1371,7 +1375,7 @@ void QucsApp::slotLoadModule()
     // initialize dialog
 
     // pass list of potential symbol files
-    ld->symbolFiles << files;
+    ld->propsListFiles << files;
     ld->projDir = projDir;
     ld->initDialog();
 
@@ -1435,9 +1439,13 @@ void QucsApp::slotLoadModule()
  * Run the va2cpp
  * Run the cpp2lib
  *
- * TODO
+ * Creates .cpp, .h files
+ * Creates _sym.json, _prop.json
+ *
+ * \todo
  * - split into two actions, elaborate and compile?
  * - collect, parse and display output of make
+ * - allow configuration of makefiles (libc++, libstdc++)
  *
  */
 void QucsApp::slotBuildModule()
