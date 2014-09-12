@@ -31,6 +31,7 @@
 #include <QLabel>
 #include <QCheckBox>
 #include <QDir>
+#include <QLineEdit>
 
 class QBoxLayout;
 class QBoxLayout;
@@ -58,8 +59,9 @@ public:
     ~LoadDialog();
     void setApp(QucsApp *a);
     void initDialog();
+    void createSymbol(QString module);
 
-    QStringList symbolFiles;
+    QStringList propsListFiles;
     QDir projDir;
 
     QMap<QString, QString> selectedComponents;
@@ -68,6 +70,8 @@ private slots:
     void slotSelectAll();
     void slotSelectNone();
     void slotSymbolFileClicked(QListWidgetItem *item);
+    void slotInclude();
+    void slotRemove();
 
 protected slots:
     void reject();
@@ -89,6 +93,12 @@ private:
     QPushButton *ButtOk, *ButtCancel,
                 *ButtSelectAll, *ButtSelectNone,
                 *ButtChangeIcon;
+    QLabel *labelInclude;
+    QLineEdit *lineInclude;
+    QPushButton *ButtInclude;
+    QPushButton *ButtRemove;
+
+    QMap<QString, QString> moduleInclude;
 };
 
 #endif // LOADDIALOG_H
