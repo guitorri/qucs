@@ -39,6 +39,7 @@
 
 #include "loaddialog.h"
 #include "qucs.h"
+#include "main.h"
 #include "qucsdoc.h"
 #include "components/components.h"
 
