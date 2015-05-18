@@ -466,6 +466,7 @@ void createIcons() {
  *  - category directory, ex.: ./lumped components/
  *    - CSV with component data fields. Ex [component#]_data.csv
  *    - CSV with component properties. Ex [component#]_props.csv
+ *    - CSV with component drawings. Ex [component#]_draw.csv
  */
 void createDocData() {
 
@@ -564,6 +565,72 @@ void createDocData() {
         compProps.clear();
         file.close();
         fprintf(stdout, "[%s] %s %s \n", category.toAscii().data(), c->Model.toAscii().data(), fileProps.name().toAscii().data());
+
+        // 001_props.csv - CSV file with component drawings
+        // FIXME: handle components with parameters that affect drawings (NPN/PNP, ...)
+        // FIXME: Ban components that fully rely on external data (file based, others?)
+        // FIXME: Text data depends on size
+        // FIXME: Need to add as well component center coordinate
+        QString objDrawFile = QString("%1_draw.csv").arg( ID ) ;
+
+        QFile fileDraws(curDir + objDrawFile );
+        if (!fileDraws.open(QFile::WriteOnly | QFile::Text)) return;
+        QTextStream outDraws(&fileDraws);
+        outDraws << "# Note: auto-generated file (changes will be lost on update)\n";
+
+        outDraws << "# component;flags;cx;cy;tx;ty;x1;y1;x2;y2\n";
+        outDraws << QString("component;0x%1;%2;%3;%4;%5;%6;%7;%8;%9\n")
+                    .arg(c->Type, 8, 16, QChar('0')).arg(c->cx).arg(c->cy).arg(c->tx).arg(c->ty)
+                    .arg(c->x1).arg(c->y1).arg(c->x2).arg(c->y2);
+        QList<Line *> Lines      = c->Lines;
+        outDraws << "# line;x1;y1;x2;y2;pen.width;pen.color;pen.style\n";
+        foreach (Line *l, Lines) {
+          outDraws << QString("line;%1;%2;%3;%4;%5;%6;%7\n")
+                      .arg(l->x1).arg(l->y1).arg(l->x2).arg(l->y2)
+                      .arg(l->style.width()).arg(l->style.color().name()).arg(l->style.style());
+        }
+        QList<struct Arc *> Arcs = c-> Arcs;
+        outDraws << "# arc;x;y;width;height;angle;arclen;pen.width;pen.color;pen.style\n";
+        foreach(Arc *a, Arcs) {
+            outDraws << QString("arc;%1;%2;%3;%4;%5;%6;%7;%8;%9\n")
+                        .arg(a->x).arg(a->y).arg(a->w).arg(a->h)
+                        .arg(a->angle).arg(a->arclen)
+                        .arg(a->style.width()).arg(a->style.color().name()).arg(a->style.style());
+        }
+        QList<Area *> Rects      = c-> Rects;
+        outDraws << "# rect;x;y;width;height;pen.width;pen.color;pen.style;brush.color;brush.style\n";
+        foreach(Area *a, Rects) {
+            outDraws << QString("rect;%1;%2;%3;%4;%5;%6;%7;%8;%9\n")
+                        .arg(a->x).arg(a->y).arg(a->w).arg(a->h)
+                        .arg(a->Pen.width()).arg(a->Pen.color().name()).arg(a->Pen.style())
+                        .arg(a->Brush.color().name()).arg(a->Brush.style());
+        }
+        QList<Area *> Ellips     = c-> Ellips;
+        outDraws << "# ellips;x;y;width;height;pen.width;pen.color;pen.style;brush.color;brush.style\n";
+        foreach(Area *a, Ellips) {
+            outDraws << QString("ellips;%1;%2;%3;%4;%5;%6;%7;%8;%9\n")
+                        .arg(a->x).arg(a->y).arg(a->w).arg(a->h)
+                        .arg(a->Pen.width()).arg(a->Pen.color().name()).arg(a->Pen.style())
+                        .arg(a->Brush.color().name()).arg(a->Brush.style());
+        }
+        QList<Port *> Ports      = c->Ports;
+        int portNb = 1;
+        // TBD: avail is always 1, type is always empty
+        outDraws << "# port;seq;x;y;avail;type\n";
+        foreach(Port *p, Ports) {
+            outDraws << QString("port;%1;%2;%3;%4;%5\n")
+                        .arg(portNb++).arg(p->x).arg(p->y).arg(p->avail).arg(p->Type);
+        }
+        QList<Text*> Texts       = c->Texts;
+        outDraws << "# text;x;y;content;color;size;sin;cos;over;under\n";
+        foreach(Text *t, Texts) {
+            outDraws << QString("text;%1;%2;%3;%4;%5;%6;%7;%8;%9\n")
+                        .arg(t->x).arg(t->y).arg(t->s).arg(t->Color.name())
+                        .arg(t->Size).arg(t->mSin).arg(t->mCos).arg(t->over).arg(t->under);
+        }
+        file.close();
+        fprintf(stdout, "[%s] %s %s \n", category.toAscii().data(), c->Model.toAscii().data(), fileDraws.name().toAscii().data());
+
     } // module
   } // category
   fprintf(stdout, "Created data for %i components from %i categories\n", nComps, nCats);
@@ -806,6 +873,7 @@ int main(int argc, char *argv[])
   "                 * one directory per category (e.g. ./lumped components/)\n"
   "                   - CSV file with component data ([comp#]_data.csv)\n"
   "                   - CSV file with component properties. ([comp#]_props.csv)\n"
+  "                   - CSV file with component drawings. ([component#]_draw.csv)\n"
   "  -list-entries  list component entry formats for schematic and netlist\n"
   , argv[0]);
       return 0;
