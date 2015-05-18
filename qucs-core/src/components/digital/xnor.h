@@ -25,6 +25,7 @@
 #ifndef __XNOR_H__
 #define __XNOR_H__
 
+#include "digital.h"
 class logicxnor : public digital
 {
  public:

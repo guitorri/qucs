@@ -25,6 +25,7 @@
 #ifndef __MUTUAL2_H__
 #define __MUTUAL2_H__
 
+#include "circuit.h"
 class mutual2 : public qucs::circuit
 {
  public:

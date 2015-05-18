@@ -25,6 +25,7 @@
 #ifndef __CPWSTEP_H__
 #define __CPWSTEP_H__
 
+#include "circuit.h"
 class cpwstep : public qucs::circuit
 {
  public:

@@ -34,6 +34,7 @@
 #ifndef __ECVS_H__
 #define __ECVS_H__
 
+#include "circuit.h"
 class ecvs : public qucs::circuit
 {
  public:

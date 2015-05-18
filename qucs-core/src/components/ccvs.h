@@ -25,6 +25,7 @@
 #ifndef __CCVS_H__
 #define __CCVS_H__
 
+#include "circuit.h"
 class ccvs : public qucs::circuit
 {
  public:

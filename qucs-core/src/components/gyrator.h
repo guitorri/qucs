@@ -25,6 +25,7 @@
 #ifndef __GYRATOR_H__
 #define __GYRATOR_H__
 
+#include "circuit.h"
 class gyrator : public qucs::circuit
 {
  public:

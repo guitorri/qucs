@@ -25,6 +25,7 @@
 #ifndef __SHORT_H__
 #define __SHORT_H__
 
+#include "circuit.h"
 class ashort : public qucs::circuit
 {
  public:

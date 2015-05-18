@@ -25,6 +25,7 @@
 #ifndef __XOR_H__
 #define __XOR_H__
 
+#include "digital.h"
 class logicxor : public digital
 {
  public:

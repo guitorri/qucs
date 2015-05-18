@@ -26,6 +26,7 @@
 #ifndef __VEXP_H__
 #define __VEXP_H__
 
+#include "circuit.h"
 class vexp : public qucs::circuit
 {
  public:

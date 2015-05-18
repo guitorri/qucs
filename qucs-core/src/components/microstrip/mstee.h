@@ -25,6 +25,7 @@
 #ifndef __MSTEE_H__
 #define __MSTEE_H__
 
+#include "circuit.h"
 namespace qucs {
   class circuit;
   class net;

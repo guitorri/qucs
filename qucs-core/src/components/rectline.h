@@ -24,6 +24,7 @@
 #ifndef __RECTLINE_H__
 #define __RECTLINE_H__
 
+#include "circuit.h"
 /*! A TE10 rectangular waveguide component
     \note Evanecent mode are not implemented
     \todo Implement evanecent mode

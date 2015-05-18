@@ -26,6 +26,7 @@
 #ifndef __MSGAP_H__
 #define __MSGAP_H__
 
+#include "circuit.h"
 class msgap : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __OR_H__
 #define __OR_H__
 
+#include "digital.h"
 class logicor : public digital
 {
  public:

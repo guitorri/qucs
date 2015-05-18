@@ -25,6 +25,7 @@
 #ifndef __DCFEED_H__
 #define __DCFEED_H__
 
+#include "circuit.h"
 class dcfeed : public qucs::circuit
 {
  public:

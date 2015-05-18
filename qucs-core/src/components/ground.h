@@ -25,6 +25,7 @@
 #ifndef __GROUND_H__
 #define __GROUND_H__
 
+#include "circuit.h"
 class ground : public qucs::circuit
 {
  public:

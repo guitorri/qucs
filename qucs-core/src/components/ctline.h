@@ -25,6 +25,7 @@
 #ifndef __CTLINE_H__
 #define __CTLINE_H__
 
+#include "circuit.h"
 class ctline : public qucs::circuit
 {
  public:

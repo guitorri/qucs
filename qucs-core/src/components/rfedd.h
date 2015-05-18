@@ -25,6 +25,7 @@
 #ifndef __RFEDD_H__
 #define __RFEDD_H__
 
+#include "circuit.h"
 class rfedd : public qucs::circuit
 {
  public:

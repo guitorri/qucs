@@ -25,6 +25,7 @@
 #ifndef __MOSFET_H__
 #define __MOSFET_H__
 
+#include "circuit.h"
 class mosfet : public qucs::circuit
 {
  public:

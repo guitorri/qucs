@@ -25,6 +25,7 @@
 #ifndef __ITRAFO_H__
 #define __ITRAFO_H__
 
+#include "circuit.h"
 class itrafo : public qucs::circuit
 {
  public:

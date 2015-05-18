@@ -27,6 +27,7 @@
 
 #include "devstates.h"
 
+#include "circuit.h"
 class triac : public qucs::circuit, public qucs::devstates
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __BIASTEE_H__
 #define __BIASTEE_H__
 
+#include "circuit.h"
 class biastee : public qucs::circuit
 {
  public:

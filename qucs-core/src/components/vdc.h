@@ -25,6 +25,7 @@
 #ifndef __VDC_H__
 #define __VDC_H__
 
+#include "circuit.h"
 class vdc : public qucs::circuit
 {
  public:

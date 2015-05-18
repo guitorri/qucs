@@ -25,6 +25,7 @@
 #ifndef __MSCROSS_H__
 #define __MSCROSS_H__
 
+#include "circuit.h"
 class mscross : public qucs::circuit
 {
  public:

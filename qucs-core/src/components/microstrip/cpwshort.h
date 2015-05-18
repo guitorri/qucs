@@ -25,6 +25,7 @@
 #ifndef __CPWSHORT_H__
 #define __CPWSHORT_H__
 
+#include "circuit.h"
 class cpwshort : public qucs::circuit
 {
  public:

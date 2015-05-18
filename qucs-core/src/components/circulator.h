@@ -25,6 +25,7 @@
 #ifndef __CIRCULATOR_H__
 #define __CIRCULATOR_H__
 
+#include "circuit.h"
 class circulator : public qucs::circuit
 {
  public:

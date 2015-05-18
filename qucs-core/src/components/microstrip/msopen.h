@@ -26,6 +26,7 @@
 #ifndef __MSOPEN_H__
 #define __MSOPEN_H__
 
+#include "circuit.h"
 class msopen : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __VAM_H__
 #define __VAM_H__
 
+#include "circuit.h"
 class vam : public qucs::circuit
 {
  public:

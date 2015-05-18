@@ -25,6 +25,7 @@
 #ifndef __JFET_H__
 #define __JFET_H__
 
+#include "circuit.h"
 class jfet : public qucs::circuit
 {
  public:

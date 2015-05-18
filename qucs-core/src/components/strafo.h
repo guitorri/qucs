@@ -25,6 +25,7 @@
 #ifndef __STRAFO_H__
 #define __STRAFO_H__
 
+#include "circuit.h"
 class strafo : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __COUPLER_H__
 #define __COUPLER_H__
 
+#include "circuit.h"
 class coupler : public qucs::circuit
 {
  public:

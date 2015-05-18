@@ -25,6 +25,7 @@
 #ifndef __VPULSE_H__
 #define __VPULSE_H__
 
+#include "circuit.h"
 class vpulse : public qucs::circuit
 {
  public:

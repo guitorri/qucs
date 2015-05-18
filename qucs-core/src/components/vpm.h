@@ -25,6 +25,7 @@
 #ifndef __VPM_H__
 #define __VPM_H__
 
+#include "circuit.h"
 class vpm : public qucs::circuit
 {
  public:

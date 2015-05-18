@@ -26,6 +26,7 @@
 #ifndef __VFILE_H__
 #define __VFILE_H__
 
+#include "circuit.h"
 namespace qucs {
   class dataset;
   class interpolator;

@@ -25,6 +25,7 @@
 #ifndef __TEE_H__
 #define __TEE_H__
 
+#include "circuit.h"
 class tee : public qucs::circuit
 {
  public:

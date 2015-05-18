@@ -25,6 +25,7 @@
 #ifndef __PAC_H__
 #define __PAC_H__
 
+#include "circuit.h"
 class pac : public qucs::circuit
 {
  public:

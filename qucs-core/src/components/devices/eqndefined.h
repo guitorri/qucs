@@ -25,6 +25,7 @@
 #ifndef __EQNDEFINED_H__
 #define __EQNDEFINED_H__
 
+#include "circuit.h"
 class eqndefined : public qucs::circuit
 {
  public:

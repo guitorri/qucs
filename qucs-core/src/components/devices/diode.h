@@ -27,6 +27,7 @@
 
 #include "devstates.h"
 
+#include "circuit.h"
 class diode : public qucs::circuit, public qucs::devstates
 {
  public:

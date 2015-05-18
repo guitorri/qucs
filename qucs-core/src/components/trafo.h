@@ -25,6 +25,7 @@
 #ifndef __TRAFO_H__
 #define __TRAFO_H__
 
+#include "circuit.h"
 class trafo : public qucs::circuit
 {
  public:

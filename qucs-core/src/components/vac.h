@@ -25,6 +25,7 @@
 #ifndef __VAC_H__
 #define __VAC_H__
 
+#include "circuit.h"
 class vac : public qucs::circuit
 {
  public:

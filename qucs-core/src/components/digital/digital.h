@@ -25,6 +25,7 @@
 #ifndef __DIGITAL_H__
 #define __DIGITAL_H__
 
+#include "circuit.h"
 class digital : public qucs::circuit
 {
  public:

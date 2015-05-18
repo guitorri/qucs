@@ -25,6 +25,7 @@
 #ifndef __COAXLINE_H__
 #define __COAXLINE_H__
 
+#include "circuit.h"
 class coaxline : public qucs::circuit
 {
  public:

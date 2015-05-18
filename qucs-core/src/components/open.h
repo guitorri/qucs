@@ -25,6 +25,7 @@
 #ifndef __OPEN_H__
 #define __OPEN_H__
 
+#include "circuit.h"
 class open : public qucs::circuit
 {
  public:

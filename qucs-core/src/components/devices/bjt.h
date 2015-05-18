@@ -25,6 +25,7 @@
 #ifndef __BJT_H__
 #define __BJT_H__
 
+#include "circuit.h"
 class bjt : public qucs::circuit
 {
  public:

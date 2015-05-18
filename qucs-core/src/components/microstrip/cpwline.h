@@ -26,6 +26,7 @@
 #ifndef __CPWLINE_H__
 #define __CPWLINE_H__
 
+#include "circuit.h"
 class cpwline : public qucs::circuit
 {
  public:

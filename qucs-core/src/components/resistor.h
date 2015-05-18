@@ -25,6 +25,7 @@
 #ifndef __RESISTOR_H__
 #define __RESISTOR_H__
 
+#include "circuit.h"
 class resistor : public qucs::circuit
 {
  public:

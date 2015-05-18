@@ -25,6 +25,7 @@
 #ifndef __RELAIS_H__
 #define __RELAIS_H__
 
+#include "circuit.h"
 class relais : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __CPWOPEN_H__
 #define __CPWOPEN_H__
 
+#include "circuit.h"
 class cpwopen : public qucs::circuit
 {
  public:

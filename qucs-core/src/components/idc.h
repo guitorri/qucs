@@ -25,6 +25,7 @@
 #ifndef __IDC_H__
 #define __IDC_H__
 
+#include "circuit.h"
 class idc : public qucs::circuit
 {
  public:

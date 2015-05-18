@@ -26,6 +26,7 @@
 #ifndef __AMPLIFIER_H__
 #define __AMPLIFIER_H__
 
+#include "circuit.h"
 /*! Ideal and linear amplifier
 
     An ideal amplifier increases signal strength from input to output and

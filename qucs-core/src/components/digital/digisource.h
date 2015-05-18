@@ -25,6 +25,7 @@
 #ifndef __DIGISOURCE_H__
 #define __DIGISOURCE_H__
 
+#include "circuit.h"
 class digisource : public qucs::circuit
 {
  public:

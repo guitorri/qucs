@@ -25,6 +25,7 @@
 #ifndef __INDUCTOR_H__
 #define __INDUCTOR_H__
 
+#include "circuit.h"
 class inductor : public qucs::circuit
 {
  public:

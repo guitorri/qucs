@@ -25,6 +25,7 @@
 #ifndef __IAC_H__
 #define __IAC_H__
 
+#include "circuit.h"
 class iac : public qucs::circuit
 {
  public:

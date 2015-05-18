@@ -26,6 +26,7 @@
 #ifndef __MSSTEP_H__
 #define __MSSTEP_H__
 
+#include "circuit.h"
 class msstep : public qucs::circuit
 {
  public:

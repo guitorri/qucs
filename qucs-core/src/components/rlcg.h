@@ -25,6 +25,7 @@
 #ifndef __RLCG_H__
 #define __RLCG_H__
 
+#include "circuit.h"
 class rlcg : public qucs::circuit
 {
  public:

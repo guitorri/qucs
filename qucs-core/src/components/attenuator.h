@@ -25,6 +25,7 @@
 #ifndef __ATTENUATOR_H__
 #define __ATTENUATOR_H__
 
+#include "circuit.h"
 class attenuator : public qucs::circuit
 {
  public:

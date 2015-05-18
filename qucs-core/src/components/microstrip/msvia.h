@@ -25,6 +25,7 @@
 #ifndef __MSVIA_H__
 #define __MSVIA_H__
 
+#include "circuit.h"
 class msvia : public qucs::circuit
 {
  public:

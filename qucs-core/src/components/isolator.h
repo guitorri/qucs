@@ -25,6 +25,7 @@
 #ifndef __ISOLATOR_H__
 #define __ISOLATOR_H__
 
+#include "circuit.h"
 class isolator : public qucs::circuit
 {
  public:

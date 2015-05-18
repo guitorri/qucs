@@ -25,6 +25,7 @@
 #ifndef __HYBRID_H__
 #define __HYBRID_H__
 
+#include "circuit.h"
 class hybrid : public qucs::circuit
 {
  public:

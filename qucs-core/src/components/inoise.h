@@ -25,6 +25,7 @@
 #ifndef __INOISE_H__
 #define __INOISE_H__
 
+#include "circuit.h"
 class inoise : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __NOR_H__
 #define __NOR_H__
 
+#include "digital.h"
 class logicnor : public digital
 {
  public:

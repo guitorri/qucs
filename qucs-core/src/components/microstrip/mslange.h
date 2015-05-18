@@ -25,6 +25,7 @@
 #ifndef __MSLANGE_H__
 #define __MSLANGE_H__
 
+#include "circuit.h"
 class mslange : public qucs::circuit
 {
  public:

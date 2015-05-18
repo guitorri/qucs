@@ -25,6 +25,7 @@
 #ifndef __OPAMP_H__
 #define __OPAMP_H__
 
+#include "circuit.h"
 class opamp : public qucs::circuit
 {
  public:

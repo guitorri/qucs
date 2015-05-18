@@ -25,6 +25,7 @@
 #ifndef __MSLINE_H__
 #define __MSLINE_H__
 
+#include "circuit.h"
 class msline : public qucs::circuit
 {
  public:

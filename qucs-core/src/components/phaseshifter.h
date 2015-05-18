@@ -25,6 +25,7 @@
 #ifndef __PHASESHIFTER_H__
 #define __PHASESHIFTER_H__
 
+#include "circuit.h"
 class phaseshifter : public qucs::circuit
 {
  public:

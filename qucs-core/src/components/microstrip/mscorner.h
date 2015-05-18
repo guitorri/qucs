@@ -26,6 +26,7 @@
 #ifndef __MSCORNER_H__
 #define __MSCORNER_H__
 
+#include "circuit.h"
 class mscorner : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __IPROBE_H__
 #define __IPROBE_H__
 
+#include "circuit.h"
 class iprobe : public qucs::circuit
 {
  public:

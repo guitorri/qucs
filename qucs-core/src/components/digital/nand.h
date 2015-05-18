@@ -25,6 +25,7 @@
 #ifndef __NAND_H__
 #define __NAND_H__
 
+#include "digital.h"
 class logicnand : public digital
 {
  public:

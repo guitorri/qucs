@@ -25,6 +25,7 @@
 #ifndef __CPWGAP_H__
 #define __CPWGAP_H__
 
+#include "circuit.h"
 class cpwgap : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __TSWITCH_H__
 #define __TSWITCH_H__
 
+#include "circuit.h"
 class tswitch : public qucs::circuit
 {
  public:

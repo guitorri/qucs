@@ -27,6 +27,7 @@
 #define __BONDWIRE_H__
 
 
+#include "circuit.h"
 class bondwire : public qucs::circuit
 {
  public:

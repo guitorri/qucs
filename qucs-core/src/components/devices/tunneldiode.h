@@ -25,6 +25,7 @@
 #ifndef __TUNNELDIODE_H__
 #define __TUNNELDIODE_H__
 
+#include "circuit.h"
 class tunneldiode : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __MSCOUPLED_H__
 #define __MSCOUPLED_H__
 
+#include "circuit.h"
 class mscoupled : public qucs::circuit
 {
  public:

@@ -25,6 +25,7 @@
 #ifndef __DCBLOCK_H__
 #define __DCBLOCK_H__
 
+#include "circuit.h"
 class dcblock : public qucs::circuit
 {
  public:

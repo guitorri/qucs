@@ -25,6 +25,7 @@
 #ifndef __IRECT_H__
 #define __IRECT_H__
 
+#include "circuit.h"
 class irect : public qucs::circuit
 {
  public:

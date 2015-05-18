@@ -25,6 +25,7 @@
 #ifndef __VCCS_H__
 #define __VCCS_H__
 
+#include "circuit.h"
 class vccs : public qucs::circuit
 {
  public:

@@ -26,6 +26,7 @@
 #ifndef __MSMBEND_H__
 #define __MSMBEND_H__
 
+#include "circuit.h"
 class msmbend : public qucs::circuit
 {
  public:

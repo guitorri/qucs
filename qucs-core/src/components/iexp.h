@@ -26,6 +26,7 @@
 #ifndef __IEXP_H__
 #define __IEXP_H__
 
+#include "circuit.h"
 class iexp : public qucs::circuit
 {
  public:

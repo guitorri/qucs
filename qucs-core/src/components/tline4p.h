@@ -25,6 +25,7 @@
 #ifndef __TLINE4P_H__
 #define __TLINE4P_H__
 
+#include "circuit.h"
 class tline4p : public qucs::circuit
 {
  public:

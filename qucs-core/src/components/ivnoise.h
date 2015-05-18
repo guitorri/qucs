@@ -25,6 +25,7 @@
 #ifndef __IVNOISE_H__
 #define __IVNOISE_H__
 
+#include "circuit.h"
 class ivnoise : public qucs::circuit
 {
  public:

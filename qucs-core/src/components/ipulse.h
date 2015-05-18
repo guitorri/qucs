@@ -25,6 +25,7 @@
 #ifndef __IPULSE_H__
 #define __IPULSE_H__
 
+#include "circuit.h"
 class ipulse : public qucs::circuit
 {
  public:

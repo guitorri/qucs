@@ -25,6 +25,7 @@
 #ifndef __VRECT_H__
 #define __VRECT_H__
 
+#include "circuit.h"
 class vrect : public qucs::circuit
 {
  public:

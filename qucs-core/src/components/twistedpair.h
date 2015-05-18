@@ -25,6 +25,7 @@
 #ifndef __TWISTEDPAIR_H__
 #define __TWISTEDPAIR_H__
 
+#include "circuit.h"
 class twistedpair : public qucs::circuit
 {
  public:

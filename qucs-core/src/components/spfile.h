@@ -25,6 +25,7 @@
 #ifndef __SPFILE_H__
 #define __SPFILE_H__
 
+#include "circuit.h"
 namespace qucs {
   class vector;
   class matvec;

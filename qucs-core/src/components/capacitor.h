@@ -25,6 +25,7 @@
 #ifndef __CAPACITOR_H__
 #define __CAPACITOR_H__
 
+#include "circuit.h"
 /*\brief Capacitor class */
 class capacitor : public qucs::circuit
 {

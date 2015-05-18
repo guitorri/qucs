@@ -25,6 +25,7 @@
 #ifndef __MSRSTUB_H__
 #define __MSRSTUB_H__
 
+#include "circuit.h"
 class msrstub : public qucs::circuit
 {
  public:
